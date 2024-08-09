@@ -1,11 +1,31 @@
 import * as React from "react";
-import { Image } from "expo-image";
+import { Image, Dimensions } from "react-native";
 import { StyleSheet, View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { Camera } from "expo-camera";
+import { useState, useEffect } from "react";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
+
+const { width, height } = Dimensions.get("window");
 
 const TEST = () => {
   const navigation = useNavigation();
+  const [hasPermission, setHasPermission] = useState(null);
+  const [cameraRef, setCameraRef] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestPermissionsAsync();
+      setHasPermission(status === "granted");
+    })();
+  }, []);
+
+  if (hasPermission === null) {
+    return <View />;
+  }
+  if (hasPermission === false) {
+    return <Text>No access to camera</Text>;
+  }
 
   return (
     <View style={styles.test}>
@@ -16,7 +36,9 @@ const TEST = () => {
       />
       <View style={styles.testChild} />
       <Text style={[styles.test1, styles.test1Typo]}>TEST</Text>
-      <View style={styles.testItem} />
+      <View style={styles.testItem}>
+        <Camera style={styles.camera} type={Camera.Constants.Type.back} ref={ref => setCameraRef(ref)} />
+      </View>
       <View style={[styles.testInner, styles.testInnerShadowBox]} />
       <View style={[styles.rectangleView, styles.backPosition]} />
       <Pressable
@@ -64,8 +86,8 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   image4Icon: {
-    height: 648,
-    width: 360,
+    width: width,
+    height: height,
     left: 0,
     top: 0,
     position: "absolute",
@@ -76,7 +98,7 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_100,
-    width: 360,
+    width: "100%",
     left: 0,
     top: 0,
     position: "absolute",
@@ -103,13 +125,13 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowColor: "rgba(0, 0, 0, 0.25)",
-    width: 360,
+    width: "100%",
     left: 0,
     position: "absolute",
   },
   testInner: {
     top: 406,
-    left: 112,
+    left: "50%",
     width: 136,
     height: 130,
     backgroundColor: Color.colorLimegreen_100,
@@ -117,6 +139,11 @@ const styles = StyleSheet.create({
     elevation: 6,
     shadowRadius: 6,
     position: "absolute",
+    overflow: "hidden", // Ensure the camera feed doesn't overflow
+    transform: [{ translateX: -68 }],
+  },
+  camera: {
+    flex: 1,
   },
   rectangleView: {
     marginLeft: -42,
@@ -157,7 +184,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhite,
     flex: 1,
     width: "100%",
-    height: 640,
+    height: "100%",
     overflow: "hidden",
   },
 });

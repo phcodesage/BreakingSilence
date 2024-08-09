@@ -1,13 +1,16 @@
 import React, { useMemo } from "react";
-import { Image } from "expo-image";
+import { Image, Dimensions } from "react-native";
 import { StyleSheet, View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
+
+const { width, height } = Dimensions.get("window");
 
 const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
+
 const HOME2 = ({
   androidSmall2Position,
   androidSmall2Width,
@@ -128,11 +131,9 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   image2Icon: {
-    height: 648,
-    left: 0,
-    top: 0,
+    width: width,
+    height: height,
     position: "absolute",
-    width: 360,
   },
   androidSmall2Child: {
     backgroundColor: Color.colorLimegreen_100,
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
     left: 0,
     top: 0,
     position: "absolute",
-    width: 360,
+    width: "100%",
   },
   androidSmall2Item: {
     marginLeft: -69,
@@ -268,9 +269,8 @@ const styles = StyleSheet.create({
   },
   androidSmall2: {
     backgroundColor: Color.colorWhite,
-    height: 640,
-    overflow: "hidden",
-    width: 360,
+    height: "100%",
+    width: "100%",
   },
 });
 

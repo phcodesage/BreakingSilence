@@ -25,19 +25,18 @@ const ABOUTUS = () => {
       <View style={[styles.aboutUsInner, styles.aboutShadowBox]} />
       <View style={styles.rectangleView} />
       <Text
-        style={[styles.ourGroupIs, styles.ourGroupTypo]}
-      >{`Our group is dedicated to  creating a creative sign linguistic app that 
-encourages both accessibility
-and exclusivity. By means of
-interactive guides and actual
-characteristics for time 
-translation,our goal to close
-gaps in communication and
-enable users everywhere. 
-With continuous user input
-and a dedication to our goal,  Not only are we developing
-an app; We're making the
-globe more welcoming.  `}</Text>
+        style={[styles.ourGroupIs, styles.ourGroupTypo]}>{`Our group is dedicated to creating a creative signlinguistic app that 
+        encourages both accessibility
+        and exclusivity. By means of
+        interactive guides and actual
+        characteristics for time 
+        translation,our goal to close
+        gaps in communication and
+        enable users everywhere. 
+        With continuous user input
+        and a dedication to our goal, Not only are we developing
+        an app; We're making the
+        globe more welcoming.`}</Text>
       <Image
         style={[styles.rectangleIcon, styles.aboutUsItemLayout]}
         contentFit="cover"
@@ -49,19 +48,18 @@ globe more welcoming.  `}</Text>
         <Text style={[styles.back1, styles.backTypo]}>BACK</Text>
       </Pressable>
       <Text
-        style={[styles.ourGoalIs, styles.ourGroupTypo]}
-      >{`Our goal is to break down
-barriers and promote
-inclusive by means of 
-technology. We picture in
-a world where dialogue is
-genuinely global, where
-each and every has the 
-resources necessary for
-connection, learn and give
-their complete expression. 
- 
-`}</Text>
+        style={[styles.ourGoalIs, styles.ourGroupTypo]}>{`Our goal is to break down
+        barriers and promote
+        inclusive by means of 
+        technology. We picture in
+        a world where dialogue is
+        genuinely global, where
+        each and every has the 
+        resources necessary for
+        connection, learn and give
+        their complete expression. 
+        
+        `}</Text>
       <Pressable
         style={styles.back2Position}
         onPress={() => navigation.goBack()}
@@ -78,7 +76,7 @@ are to increase accessibility
 to sign language,
 empower the deaf 
 population, and close 
-communication barriers. `}</Text>
+communication barriers.`}</Text>
     </View>
   );
 };
@@ -89,6 +87,7 @@ const styles = StyleSheet.create({
     height: 61,
     left: "50%",
     position: "absolute",
+    
   },
   whoWeAreTypo: {
     textAlign: "left",
@@ -271,7 +270,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: 640,
+    overflowY: "scroll",
   },
 });
-
 export default ABOUTUS;

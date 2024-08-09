@@ -22,7 +22,7 @@ const HOME = () => {
 const styles = StyleSheet.create({
   home: {
     flex: 1,
-    width: "100%",
+    width: "100vw",
     height: 640,
   },
 });

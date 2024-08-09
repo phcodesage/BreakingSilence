@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "team_dream_(copy)",
-    "slug": "team_dream_(copy)",
+    "name": "Breaking Silence",
+    "slug": "breakingsilence",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,16 +18,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.breakingsilence"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.example.breakingsilence"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "61cba5fa-9139-4150-aeaf-87a225c43a8d"
+      }
     }
   }
 }
