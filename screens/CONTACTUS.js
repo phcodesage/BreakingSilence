@@ -1,45 +1,213 @@
 import * as React from "react";
-import { Image } from "expo-image";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { StyleSheet, View, Text, Pressable, Image, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const CONTACTUS = () => {
   const navigation = useNavigation();
+  const { width, height } = Dimensions.get('window');
+
+  const styles = StyleSheet.create({
+    back1Typo: {
+      textAlign: "left",
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    contactPosition: {
+      height: height * 0.091,
+      left: "50%",
+      position: "absolute",
+    },
+    contactShadowBox: {
+      borderWidth: 2,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+    },
+    rectanglePosition: {
+      left: "50%",
+      position: "absolute",
+    },
+    teamDreamTypo: {
+      fontSize: width * 0.044,
+      textAlign: "left",
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+      left: "50%",
+      position: "absolute",
+    },
+    backPosition: {
+      top: height * 0.892,
+      left: "50%",
+      position: "absolute",
+    },
+    image5Icon: {
+      top: height * -0.0125,
+      height: height * 1.0125,
+      width: width,
+      left: 0,
+      position: "absolute",
+    },
+    contactUsChild: {
+      top: 0,
+      backgroundColor: Color.colorLimegreen_100,
+      borderBottomWidth: 3,
+      height: height * 0.095,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      width: width,
+      left: 0,
+      position: "absolute",
+    },
+    contactUs1: {
+      marginLeft: width * -0.217,
+      top: height * -0.0047,
+      fontSize: width * 0.1,
+      left: "50%",
+      position: "absolute",
+    },
+    contactUsItem: {
+      marginLeft: width * -0.225,
+      top: height * 0.18,
+      width: width * 0.453,
+      borderWidth: 2,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorGainsboro_100,
+    },
+    contactUsInner: {
+      marginLeft: width * -0.219,
+      top: height * 0.475,
+      width: width * 0.442,
+    },
+    rectangleView: {
+      marginLeft: width * -0.261,
+      top: height * 0.309,
+      width: width * 0.522,
+      height: height * 0.0625,
+      backgroundColor: Color.colorGainsboro_100,
+      borderWidth: 2,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      left: "50%",
+      position: "absolute",
+    },
+    rectangleIcon: {
+      marginLeft: width * -0.233,
+      top: height * 0.597,
+      width: width * 0.469,
+      height: height * 0.0766,
+    },
+    teamDream: {
+      marginLeft: width * -0.05,
+      top: height * 0.6125,
+    },
+    teamdreamgmailcom: {
+      marginLeft: width * -0.186,
+      top: height * 0.319,
+    },
+    messageUs: {
+      marginLeft: width * -0.161,
+      top: height * 0.186,
+      fontSize: width * 0.075,
+      left: "50%",
+      position: "absolute",
+    },
+    ourSocials: {
+      marginLeft: width * -0.169,
+      top: height * 0.486,
+      fontSize: width * 0.072,
+      left: "50%",
+      position: "absolute",
+    },
+    image6Icon: {
+      top: height * 0.608,
+      left: width * 0.314,
+      width: width * 0.125,
+      height: height * 0.0547,
+      position: "absolute",
+    },
+    contactUsChild1: {
+      marginLeft: width * -0.125,
+      backgroundColor: Color.colorLimegreen_200,
+      width: width * 0.253,
+      height: height * 0.075,
+      borderWidth: 2,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      top: height * 0.892,
+    },
+    back1: {
+      marginLeft: width * -0.069,
+      fontSize: width * 0.067,
+    },
+    contactUs: {
+      backgroundColor: Color.colorWhite,
+      flex: 1,
+      width: "100%",
+      height: height,
+      overflow: "hidden",
+    },
+  });
 
   return (
     <View style={styles.contactUs}>
       <Image
         style={styles.image5Icon}
-        contentFit="cover"
-        source={require("../assets/image-2.png")}
+        resizeMode="cover"
+        source={require("../assets/image-51.png")}
       />
       <View style={styles.contactUsChild} />
-      <Text style={[styles.contactUs1, styles.back1Typo]}>Contact Us</Text>
-      <View style={[styles.contactUsItem, styles.contactPosition]} />
-      <Image
-        style={[styles.contactUsInner, styles.contactPosition]}
-        contentFit="cover"
-        source={require("../assets/rectangle-22.png")}
-      />
+      <Text style={[styles.contactUs1, styles.back1Typo]}>CONTACT US</Text>
+      <View style={[styles.contactUsItem, styles.contactPosition, styles.contactShadowBox]} />
+      <View style={[styles.contactUsInner, styles.contactPosition, styles.contactShadowBox]} />
       <View style={[styles.rectangleView, styles.contactShadowBox]} />
       <Image
         style={[styles.rectangleIcon, styles.rectanglePosition]}
-        contentFit="cover"
-        source={require("../assets/rectangle-23.png")}
+        resizeMode="cover"
+        source={require("../assets/rectangle-18.png")}
       />
-      <Text style={[styles.teamDream, styles.teamDreamTypo]}>@Team Dream</Text>
+      <Text style={[styles.teamDream, styles.teamDreamTypo]}>TEAM DREAM</Text>
       <Text style={[styles.teamdreamgmailcom, styles.teamDreamTypo]}>
         teamdream@gmail.com
       </Text>
-      <Text style={[styles.messageUs, styles.back1Typo]}>Message Us</Text>
-      <Text style={[styles.ourSocials, styles.back1Typo]}>Our Socials:</Text>
+      <Text style={[styles.messageUs, styles.back1Typo]}>MESSAGE US</Text>
+      <Text style={[styles.ourSocials, styles.back1Typo]}>OUR SOCIALS</Text>
       <Image
         style={styles.image6Icon}
-        contentFit="cover"
+        resizeMode="cover"
         source={require("../assets/image-6.png")}
       />
-      <View style={[styles.contactUsChild1, styles.backPosition]} />
+      <View style={[styles.contactUsChild1, styles.backPosition, styles.contactShadowBox]} />
       <Pressable
         style={styles.backPosition}
         onPress={() => navigation.goBack()}
@@ -49,177 +217,5 @@ const CONTACTUS = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  back1Typo: {
-    textAlign: "left",
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  contactPosition: {
-    height: 58,
-    left: "50%",
-    position: "absolute",
-  },
-  contactShadowBox: {
-    borderWidth: 2,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-  },
-  rectanglePosition: {
-    left: "50%",
-    position: "absolute",
-  },
-  teamDreamTypo: {
-    fontSize: FontSize.size_base,
-    textAlign: "left",
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-    left: "50%",
-    position: "absolute",
-  },
-  backPosition: {
-    top: 571,
-    left: "50%",
-    position: "absolute",
-  },
-  image5Icon: {
-    top: -8,
-    height: 648,
-    width: 360,
-    left: 0,
-    position: "absolute",
-  },
-  contactUsChild: {
-    top: 0,
-    backgroundColor: Color.colorLimegreen_100,
-    borderBottomWidth: 3,
-    height: 61,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    width: 360,
-    left: 0,
-    position: "absolute",
-  },
-  contactUs1: {
-    marginLeft: -78,
-    top: -3,
-    fontSize: FontSize.size_18xl,
-    left: "50%",
-    position: "absolute",
-  },
-  contactUsItem: {
-    marginLeft: -81,
-    top: 115,
-    width: 163,
-    borderWidth: 2,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorGainsboro_100,
-  },
-  contactUsInner: {
-    marginLeft: -79,
-    top: 304,
-    width: 159,
-  },
-  rectangleView: {
-    marginLeft: -94,
-    top: 198,
-    width: 188,
-    height: 40,
-    backgroundColor: Color.colorGainsboro_100,
-    borderWidth: 2,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    left: "50%",
-    position: "absolute",
-  },
-  rectangleIcon: {
-    marginLeft: -84,
-    top: 382,
-    width: 169,
-    height: 49,
-  },
-  teamDream: {
-    marginLeft: -18,
-    top: 392,
-  },
-  teamdreamgmailcom: {
-    marginLeft: -67,
-    top: 204,
-  },
-  messageUs: {
-    marginLeft: -58,
-    top: 119,
-    fontSize: 27,
-    left: "50%",
-    position: "absolute",
-  },
-  ourSocials: {
-    marginLeft: -61,
-    top: 311,
-    fontSize: 26,
-    left: "50%",
-    position: "absolute",
-  },
-  image6Icon: {
-    top: 389,
-    left: 113,
-    width: 45,
-    height: 35,
-    position: "absolute",
-  },
-  contactUsChild1: {
-    marginLeft: -45,
-    backgroundColor: Color.colorLimegreen_200,
-    width: 91,
-    height: 48,
-    borderWidth: 2,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    top: 571,
-  },
-  back1: {
-    marginLeft: -25,
-    fontSize: FontSize.size_9xl,
-  },
-  contactUs: {
-    backgroundColor: Color.colorWhite,
-    flex: 1,
-    width: "100%",
-    height: 640,
-    overflow: "hidden",
-  },
-});
 
 export default CONTACTUS;
