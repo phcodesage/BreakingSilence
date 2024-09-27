@@ -1,11 +1,168 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { StyleSheet, View, Text, Pressable, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const TUTORIALS = () => {
   const navigation = useNavigation();
+  const { width, height } = Dimensions.get('window');
+
+  const styles = StyleSheet.create({
+    back1Typo: {
+      textAlign: "left",
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    tutorialsShadowBox: {
+      width: width * 0.54,
+      left: width * 0.23,
+      height: height * 0.075,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_200,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+    easyPosition: {
+      top: height * 0.233,
+      position: "absolute",
+    },
+    moderatePosition: {
+      top: height * 0.336,
+      position: "absolute",
+    },
+    tutorialsChildPosition: {
+      height: height * 0.095,
+      backgroundColor: Color.colorLimegreen_100,
+      left: 0,
+      top: 0,
+      width: width,
+      position: "absolute",
+    },
+    image3Icon: {
+      top: 0,
+      left: 0,
+      height: height,
+      width: width,
+      position: "absolute",
+    },
+    tutorialsChild: {
+      marginLeft: width * -0.142,
+      width: width * 0.286,
+      height: height * 0.075,
+      borderWidth: 2,
+      backgroundColor: Color.colorLimegreen_200,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      left: "50%",
+      bottom: height * 0.05,
+      position: "absolute",
+    },
+    back1: {
+      marginLeft: width * -0.067,
+      fontSize: FontSize.size_9xl,
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    back: {
+      left: "50%",
+      bottom: height * 0.0625,
+      position: "absolute",
+    },
+    tutorialsItem: {
+      top: height * 0.233,
+      position: "absolute",
+    },
+    easy1: {
+      marginLeft: width * -0.064,
+      fontSize: FontSize.size_9xl,
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    easy: {
+      left: "50%",
+    },
+    tutorialsInner: {
+      width: width * 0.54,
+      left: width * 0.23,
+      height: height * 0.075,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_200,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+    moderate1: {
+      marginLeft: width * -0.139,
+      fontSize: FontSize.size_9xl,
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    moderate: {
+      left: "50%",
+    },
+    rectangleView: {
+      top: height * 0.439,
+      position: "absolute",
+    },
+    intermediate1: {
+      marginLeft: width * -0.178,
+      fontSize: FontSize.size_9xl,
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    intermediate: {
+      top: height * 0.441,
+      left: "50%",
+      position: "absolute",
+    },
+    tutorialsChild2: {
+      borderBottomWidth: 3,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      height: height * 0.095,
+      backgroundColor: Color.colorLimegreen_100,
+      left: 0,
+      top: 0,
+    },
+    difficulty: {
+      marginLeft: width * -0.194,
+      top: height * -0.003,
+      fontSize: FontSize.size_18xl,
+      left: "50%",
+      position: "absolute",
+    },
+    tutorials: {
+      backgroundColor: Color.colorWhite,
+      flex: 1,
+      width: "100%",
+      height: height,
+      overflow: "hidden",
+    },
+  });
 
   return (
     <View style={styles.tutorials}>
@@ -47,161 +204,5 @@ const TUTORIALS = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  back1Typo: {
-    textAlign: "left",
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  tutorialsShadowBox: {
-    width: 193,
-    left: 84,
-    height: 48,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_200,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-  },
-  easyPosition: {
-    top: 149,
-    position: "absolute",
-  },
-  moderatePosition: {
-    top: 215,
-    position: "absolute",
-  },
-  tutorialsChildPosition: {
-    height: 61,
-    backgroundColor: Color.colorLimegreen_100,
-    left: 0,
-    top: 0,
-    width: 360,
-    position: "absolute",
-  },
-  image3Icon: {
-    top: -8,
-    left: 1,
-    height: 648,
-    width: 360,
-    position: "absolute",
-  },
-  tutorialsChild: {
-    marginLeft: -51,
-    width: 103,
-    height: 48,
-    borderWidth: 2,
-    backgroundColor: Color.colorLimegreen_200,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    left: "50%",
-    top: 560,
-    position: "absolute",
-  },
-  back1: {
-    marginLeft: -24,
-    fontSize: FontSize.size_9xl,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  back: {
-    left: "50%",
-    top: 560,
-    position: "absolute",
-  },
-  tutorialsItem: {
-    top: 149,
-    position: "absolute",
-  },
-  easy1: {
-    marginLeft: -23,
-    fontSize: FontSize.size_9xl,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  easy: {
-    left: "50%",
-  },
-  tutorialsInner: {
-    width: 193,
-    left: 84,
-    height: 48,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_200,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-  },
-  moderate1: {
-    marginLeft: -50,
-    fontSize: FontSize.size_9xl,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  moderate: {
-    left: "50%",
-  },
-  rectangleView: {
-    top: 281,
-    position: "absolute",
-  },
-  intermediate1: {
-    marginLeft: -64,
-    fontSize: FontSize.size_9xl,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  intermediate: {
-    top: 282,
-    left: "50%",
-    position: "absolute",
-  },
-  tutorialsChild2: {
-    borderBottomWidth: 3,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    height: 61,
-    backgroundColor: Color.colorLimegreen_100,
-    left: 0,
-    top: 0,
-  },
-  difficulty: {
-    marginLeft: -70,
-    top: -2,
-    fontSize: FontSize.size_18xl,
-    left: "50%",
-    position: "absolute",
-  },
-  tutorials: {
-    backgroundColor: Color.colorWhite,
-    flex: 1,
-    width: "100%",
-    height: 640,
-    overflow: "hidden",
-  },
-});
 
 export default TUTORIALS;

@@ -1,11 +1,274 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { StyleSheet, View, Text, Pressable, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const TUTORIALSEASY = () => {
   const navigation = useNavigation();
+  const { width, height } = Dimensions.get('window');
+
+  const styles = StyleSheet.create({
+    image1IconLayout: {
+      width: width,
+      height: height,
+    },
+    tutorialsChildShadowBox: {
+      top: height * 0.403,
+      height: height * 0.1375,
+      width: width * 0.269,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_100,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      position: "absolute",
+    },
+    tutorialsShadowBox: {
+      left: width * 0.669,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_100,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+    tutorialsPosition1: {
+      top: height * 0.731,
+      height: height * 0.1375,
+      width: width * 0.269,
+      position: "absolute",
+    },
+    rectangleIconPosition: {
+      top: height * 0.57,
+      height: height * 0.1375,
+      width: width * 0.269,
+      position: "absolute",
+    },
+    tutorialsChildBorder: {
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_100,
+      left: 0,
+      position: "absolute",
+    },
+    back1Typo: {
+      textAlign: "left",
+      color: Color.colorBlack,
+      fontFamily: FontFamily.koulenRegular,
+    },
+    tutorialsPosition: {
+      left: "50%",
+      position: "absolute",
+    },
+    image1Icon: {
+      left: 0,
+      top: 0,
+      position: "absolute",
+    },
+    tutorialsEasyChild: {
+      top: height * 0.567,
+      height: height * 0.1375,
+      width: width * 0.269,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_100,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      left: width * 0.053,
+      position: "absolute",
+    },
+    tutorialsEasyItem: {
+      left: width * 0.05,
+    },
+    tutorialsEasyInner: {
+      top: height * 0.731,
+      height: height * 0.1375,
+      width: width * 0.269,
+      position: "absolute",
+    },
+    rectangleView: {
+      left: width * 0.364,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      backgroundColor: Color.colorLimegreen_100,
+    },
+    tutorialsEasyChild1: {
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      backgroundColor: Color.colorLimegreen_100,
+      left: width * 0.053,
+    },
+    tutorialsEasyChild2: {
+      left: width * 0.669,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      backgroundColor: Color.colorLimegreen_100,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+    tutorialsEasyChild3: {
+      borderBottomWidth: 3,
+      height: height * 0.092,
+      width: width,
+      top: 0,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+    },
+    tutorials: {
+      marginLeft: width * -0.233,
+      top: height * -0.006,
+      fontSize: FontSize.size_18xl,
+      left: "50%",
+      position: "absolute",
+    },
+    tutorialsEasyChild4: {
+      top: height * 0.119,
+      borderTopWidth: 2,
+      borderBottomWidth: 2,
+      width: width,
+      height: height * 0.258,
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+    },
+    rectangleIcon: {
+      left: width * 0.364,
+    },
+    tutorialsEasyChild5: {
+      left: width * 0.358,
+    },
+    tutorialsEasyChild6: {
+      left: width * 0.667,
+    },
+    tutorialsEasyChild7: {
+      marginLeft: width * -0.144,
+      top: height * 0.902,
+      backgroundColor: Color.colorLimegreen_200,
+      width: width * 0.286,
+      height: height * 0.075,
+      borderWidth: 2,
+      borderColor: Color.colorBlack,
+      borderStyle: "solid",
+      boxShadowOpacity: 1,
+      elevation: 6,
+      boxShadowRadius: 6,
+      boxShadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      boxShadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+    back1: {
+      marginLeft: width * -0.075,
+      fontSize: FontSize.size_9xl,
+    },
+    back: {
+      top: height * 0.9,
+    },
+    image9Icon: {
+      top: height * 0.783,
+      left: width * 0.739,
+      width: width * 0.133,
+      height: height * 0.034,
+      position: "absolute",
+    },
+    aSignMade: {
+      top: height * 0.142,
+      left: width * 0.367,
+      fontSize: width * 0.042,
+      width: width * 0.608,
+      height: height * 0.172,
+      textShadow: [
+        {
+          color: "rgba(0, 0, 0, 0.25)",
+          width: 0,
+          radius: 6,
+        },
+      ],
+      position: "absolute",
+    },
+    image12Icon: {
+      top: height * 0.5,
+      left: width * 0.211,
+      width: width * 0.119,
+      height: height * 0.08,
+      position: "absolute",
+    },
+    image11Icon: {
+      top: height * 0.414,
+      left: width * 0.1,
+      width: width * 0.172,
+      height: height * 0.113,
+      position: "absolute",
+    },
+    image10Icon: {
+      top: height * 0.15,
+      left: width * 0.017,
+      width: width * 0.336,
+      height: height * 0.181,
+      position: "absolute",
+    },
+    tutorialsEasy: {
+      backgroundColor: Color.colorWhite,
+      flex: 1,
+      width: "100%",
+      overflow: "hidden",
+      height: height,
+    },
+  });
 
   return (
     <View style={styles.tutorialsEasy}>
@@ -55,7 +318,7 @@ const TUTORIALSEASY = () => {
       >{`: a sign made by holding the palm
  outward and forming a V with 
 the index and middle fingers and
- used to indicate the desire for 
+ used to indicate the desire for 
 peace.`}</Text>
       <Image
         style={styles.image12Icon}
@@ -75,271 +338,5 @@ peace.`}</Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  image1IconLayout: {
-    width: 360,
-    top: 0,
-  },
-  tutorialsChildShadowBox: {
-    top: 258,
-    height: 88,
-    width: 97,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_100,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    position: "absolute",
-  },
-  tutorialsShadowBox: {
-    left: 241,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_100,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-  },
-  tutorialsPosition1: {
-    top: 468,
-    height: 88,
-    width: 97,
-    position: "absolute",
-  },
-  rectangleIconPosition: {
-    top: 365,
-    height: 88,
-    width: 97,
-    position: "absolute",
-  },
-  tutorialsChildBorder: {
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_100,
-    left: 0,
-    position: "absolute",
-  },
-  back1Typo: {
-    textAlign: "left",
-    color: Color.colorBlack,
-    fontFamily: FontFamily.koulenRegular,
-  },
-  tutorialsPosition: {
-    left: "50%",
-    position: "absolute",
-  },
-  image1Icon: {
-    left: 0,
-    width: 360,
-    top: 0,
-    position: "absolute",
-    height: 640,
-  },
-  tutorialsEasyChild: {
-    top: 363,
-    height: 88,
-    width: 97,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_100,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    left: 19,
-    position: "absolute",
-  },
-  tutorialsEasyItem: {
-    left: 18,
-  },
-  tutorialsEasyInner: {
-    top: 468,
-    height: 88,
-    width: 97,
-    position: "absolute",
-  },
-  rectangleView: {
-    left: 131,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    backgroundColor: Color.colorLimegreen_100,
-    top: 468,
-  },
-  tutorialsEasyChild1: {
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    backgroundColor: Color.colorLimegreen_100,
-    top: 468,
-    left: 19,
-  },
-  tutorialsEasyChild2: {
-    left: 241,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorLimegreen_100,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-  },
-  tutorialsEasyChild3: {
-    borderBottomWidth: 3,
-    height: 59,
-    width: 360,
-    top: 0,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-  },
-  tutorials: {
-    marginLeft: -84,
-    top: -4,
-    fontSize: FontSize.size_18xl,
-    left: "50%",
-    position: "absolute",
-  },
-  tutorialsEasyChild4: {
-    top: 76,
-    borderTopWidth: 2,
-    borderBottomWidth: 2,
-    width: 361,
-    height: 165,
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-  },
-  rectangleIcon: {
-    left: 131,
-  },
-  tutorialsEasyChild5: {
-    left: 129,
-  },
-  tutorialsEasyChild6: {
-    left: 240,
-  },
-  tutorialsEasyChild7: {
-    marginLeft: -52,
-    top: 577,
-    backgroundColor: Color.colorLimegreen_200,
-    width: 103,
-    height: 48,
-    borderWidth: 2,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    boxShadowOpacity: 1,
-    elevation: 6,
-    boxShadowRadius: 6,
-    boxShadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    boxShadowColor: "rgba(0, 0, 0, 0.25)",
-  },
-  back1: {
-    marginLeft: -27,
-    fontSize: FontSize.size_9xl,
-  },
-  back: {
-    top: 576,
-  },
-  image9Icon: {
-    top: 501,
-    left: 266,
-    width: 48,
-    height: 22,
-    position: "absolute",
-  },
-  aSignMade: {
-    top: 91,
-    left: 132,
-    fontSize: 15,
-    width: 219,
-    height: 110,
-    textShadow: [
-      {
-        color: "rgba(0, 0, 0, 0.25)",
-        width: 0,
-        radius: 6,
-      },
-    ],
-    position: "absolute",
-  },
-  image12Icon: {
-    top: 320,
-    left: 76,
-    width: 43,
-    height: 51,
-    position: "absolute",
-  },
-  image11Icon: {
-    top: 265,
-    left: 36,
-    width: 62,
-    height: 72,
-    position: "absolute",
-  },
-  image10Icon: {
-    top: 96,
-    left: 6,
-    width: 121,
-    height: 116,
-    position: "absolute",
-  },
-  tutorialsEasy: {
-    backgroundColor: Color.colorWhite,
-    flex: 1,
-    width: "100%",
-    overflow: "hidden",
-    height: 640,
-  },
-});
 
 export default TUTORIALSEASY;

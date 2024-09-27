@@ -19,3 +19,4 @@ export const Color = {
   colorGainsboro_100: "rgba(217, 217, 217, 0.5)",
   colorGainsboro_200: "rgba(217, 217, 217, 0.7)",
 };
+ 
