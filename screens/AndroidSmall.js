@@ -1,10 +1,45 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Dimensions } from "react-native";
 import SettingsContainer from "../components/SettingsContainer";
 import { Color } from "../GlobalStyles";
 
 const AndroidSmall = () => {
+  const { width, height } = Dimensions.get('window');
+
+  const styles = StyleSheet.create({
+    androidSmall6: {
+      backgroundColor: Color.colorWhite,
+      flex: 1,
+      width: "100%",
+      height: "100%",
+      overflow: "hidden",
+    },
+    framePosition: {
+      height: "100%",
+      width: "100%",
+      left: 0,
+      top: 0,
+      position: "absolute",
+    },
+    frameChild: {
+      backgroundColor: Color.colorLimegreen_100,
+      borderStyle: "solid",
+      borderColor: Color.colorBlack,
+      borderBottomWidth: 3,
+      height: height * 0.095,
+      width: "100%",
+      left: 0,
+      top: 0,
+      position: "absolute",
+    },
+    frame: {
+      overflow: "hidden",
+      height: "100%",
+      width: "100%",
+    },
+  });
+
   return (
     <View style={styles.androidSmall6}>
       <View style={[styles.frame, styles.framePosition]}>
@@ -19,36 +54,5 @@ const AndroidSmall = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  framePosition: {
-    height: 648,
-    width: 360,
-    left: 0,
-    top: 0,
-    position: "absolute",
-  },
-  frameChild: {
-    backgroundColor: Color.colorLimegreen_100,
-    borderStyle: "solid",
-    borderColor: Color.colorBlack,
-    borderBottomWidth: 3,
-    height: 61,
-    width: 360,
-    left: 0,
-    top: 0,
-    position: "absolute",
-  },
-  frame: {
-    overflow: "hidden",
-  },
-  androidSmall6: {
-    backgroundColor: Color.colorWhite,
-    flex: 1,
-    width: "100%",
-    height: 640,
-    overflow: "hidden",
-  },
-});
 
 export default AndroidSmall;
