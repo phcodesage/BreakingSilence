@@ -15,7 +15,7 @@ const TEST = () => {
 
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === "granted");
     })();
   }, []);
@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
   testInnerShadowBox: {
     borderWidth: 2,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOpacity: 1,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOpacity: 1,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     borderColor: Color.colorBlack,
     borderStyle: "solid",
   },
@@ -115,16 +115,16 @@ const styles = StyleSheet.create({
   },
   testItem: {
     top: 98,
-    shadowRadius: 4,
+    boxShadowRadius: 4,
     elevation: 4,
     backgroundColor: Color.colorBlack,
     height: 277,
-    shadowOpacity: 1,
-    shadowOffset: {
+    boxShadowOpacity: 1,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     width: "100%",
     left: 0,
     position: "absolute",
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorLimegreen_100,
     borderWidth: 2,
     elevation: 6,
-    shadowRadius: 6,
+    boxShadowRadius: 6,
     position: "absolute",
     overflow: "hidden", // Ensure the camera feed doesn't overflow
     transform: [{ translateX: -68 }],
@@ -152,13 +152,13 @@ const styles = StyleSheet.create({
     height: 48,
     borderWidth: 2,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOpacity: 1,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOpacity: 1,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     borderColor: Color.colorBlack,
     borderStyle: "solid",
   },

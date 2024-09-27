@@ -62,14 +62,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
   },
   easyPosition: {
     top: 149,
@@ -100,14 +100,14 @@ const styles = StyleSheet.create({
     height: 48,
     borderWidth: 2,
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     left: "50%",
@@ -146,14 +146,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
   },
   moderate1: {
     marginLeft: -50,

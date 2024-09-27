@@ -41,14 +41,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
   },
   frameItemPosition: {
     top: 323,
@@ -75,14 +75,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     width: 185,
   },
   frameItem: {
@@ -91,14 +91,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
     marginLeft: -92.5,
     width: 185,
   },
@@ -132,14 +132,14 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderStyle: "solid",
     backgroundColor: Color.colorLimegreen_200,
-    shadowOpacity: 1,
+    boxShadowOpacity: 1,
     elevation: 6,
-    shadowRadius: 6,
-    shadowOffset: {
+    boxShadowRadius: 6,
+    boxShadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowColor: "rgba(0, 0, 0, 0.25)",
+    boxShadowColor: "rgba(0, 0, 0, 0.25)",
   },
   back1: {
     marginLeft: -25.5,
